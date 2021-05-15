@@ -1,0 +1,128 @@
+<!--footer section -->
+<footer [class]="class">
+	<div class="light-layout" *ngIf="newsletter">
+		<div class="container">
+			<section class="small-section border-section border-top-0">
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="subscribe">
+							<div>
+								<h4>{{'stay connected'|translate}}!</h4>
+								<p>{{'not missing newsletter'|translate}} </p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<form class="form-inline subscribe-form" method="post">
+							<div class="form-group mx-sm-3">
+								<input type="email" #name name="EMAIL" id="mce-EMAIL" class="form-control" placeholder="{{'enter email'|translate}}" required="">
+							</div>
+							<button type="submit" class="btn btn-solid">{{'subscribe'|translate}}</button>
+						</form>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+	<section class="section-b-space light-layout">
+		<div class="container">
+			<div class="row footer-theme partition-f">
+				<div class="col-lg-4 col-md-6">
+					<div class="footer-title footer-mobile-title">
+						<h4>about</h4>
+					</div>
+					<div class="footer-contant">
+						<div class="footer-logo">
+							<img [src]="themeLogo" alt="logo">
+						</div>
+						<p>
+						<i class="fa fa-map-marker"></i>
+							CMR, Yaounde, Texaco Omnisport
+							Starenweg. 17, 90556 Cadolzburg, Germany
+
+						</p>
+						<div class="footer-social">
+                            <ul>
+                                <li>
+                                    <a href="javascript:void(0)"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                </li>
+
+                            </ul>
+                        </div>
+					</div>
+				</div>
+				<div class="col offset-xl-1">
+					<div class="sub-title">
+						<div class="footer-title">
+                            <h4>{{'categories'|translate}}</h4>
+                        </div>
+                        <div class="footer-contant">
+                            <ul>
+                                <li><a href="javascript:void(0)">{{'womens'|translate}} Fashion</a></li>
+                                <li><a href="javascript:void(0)">{{'mens'|translate}} Fashion</a></li>
+                                <li><a href="javascript:void(0)">{{'kids'|translate}} Fashion</a></li>
+                            </ul>
+                        </div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="sub-title">
+						<div class="footer-title">
+                            <h4>{{'why we choose'|translate}}</h4>
+                        </div>
+                        <div class="footer-contant">
+                            <ul>
+                                <li><a href="javascript:void(0)">{{'secure shopping'|translate}}</a></li>
+                                <li><a href="javascript:void(0)">{{'shipping and return'|translate}}</a></li>
+                            </ul>
+                        </div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="sub-title">
+						<div class="footer-title">
+						    <h4>{{'contacts'|translate}}</h4>
+						</div>
+						<div class="footer-contant">
+						    <ul class="contact-list">
+
+						        <li><i class="fa fa-phone"></i> +237 697 283 051 <br/> +49 910 37 29 13 02</li>
+						        <li><i class="fa fa-envelope-o"></i> <a>info@m-tech.africa</a></li>
+
+						    </ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="sub-footer">
+		<div class="container">
+			<div class="row">
+                <div class="col-xl-6 col-md-6 col-sm-12">
+                  <div class="footer-end">
+                    <p><i class="fa fa-copyright" aria-hidden="true"></i> {{ today | date:'y'}} powered by <a class="text-black-50" href="https://m-tech.africa"><b>m-tech</b></a></p>
+                  </div>
+                </div>
+                <div class="col-xl-6 col-md-6 col-sm-12">
+                  <div class="payment-card-bottom">
+                    <ul>
+                      <li>
+                        <a><img class="img-fluid payicon" src="assets/img/mtn.png" alt=""></a>
+                      </li>
+                      <li>
+                        <a><img class="img-fluid payicon" src="assets/img/orange.png" alt=""></a>
+                      </li>
+                      <li>
+                        <a><img class="img-fluid payicon" src="assets/img/paypal.png" alt=""></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+		</div>
+	</div>
+</footer>
+<!--footer section end -->
+
+

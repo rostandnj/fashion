@@ -1,0 +1,76 @@
+
+<!-- section start -->
+<section class="login-page section-b-space">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <a (click)="close()" class="pull-right mr-3 mt-n4"><span class="fa fa-close text-black-50"></span></a>
+                <h3 *ngIf="activeForm==1">{{'login'|translate}}</h3>
+                <h3 *ngIf="activeForm==3">{{'reset password'|translate}}</h3>
+                <div *ngIf="activeForm==1" class="theme-card">
+                    <form  [formGroup]="form" (ngSubmit)="login()">
+                        <div class="form-group">
+                            <label for="email">{{'email'|translate}}</label>
+                            <input id="email" type="email" class="form-control " name="email" formControlName="email" required autofocus>
+                            <div *ngIf="f1.email.invalid && f1.email.touched && f1.email.errors?.email" class="text-danger ">
+                                <small>{{'email invalid'|translate}}</small>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">{{'password'|translate}}
+                                <small class=" ml-auto text-primary " style="margin-left: 8px;cursor: pointer" (click)="activateResetForm()">
+                                    {{'forget password'|translate}} ?
+                                </small>
+                            </label>
+                            <input id="password" type="password" class="form-control" name="password" formControlName="password" required data-eye>
+                            <div *ngIf="f1.password.invalid && f1.password.touched && f1.password.errors?.required" class="text-danger">
+                                {{'password is required'|translate}}
+                            </div>
+                        </div>
+                        <div *ngIf="formError!=''" class="form-group text-danger">
+                            {{formError}}
+                        </div>
+
+
+                        <div class="form-group m-0">
+                            <button type="submit" [disabled]="!form.valid||loadingForm" class="btn btn-primary btn-block">
+                                {{'login'|translate}}
+                                <img *ngIf="loadingForm"  class=" font-weight-bold ml-auto loader-min" src="assets/img/spinner.gif" />
+
+                            </button>
+                        </div>
+                        <div class="mt-4 ">
+                            {{'dont have an account'|translate}} ? <a href="{{config.mtechLogin}}"><small class="" style="cursor: pointer"  >{{'create one'|translate}}</small></a>
+                        </div>
+                    </form>
+                </div>
+                <div *ngIf="activeForm==3" class="theme-card">
+                    <form  [formGroup]="form" (ngSubmit)="reset()">
+                        <div class="form-group">
+                            <label for="new-email">{{'email'|translate}}</label>
+                            <input id="new-email" type="text" class="form-control" formControlName="email"  name="new-email" required autofocus >
+                            <div *ngIf="f3.email.invalid && f3.email.touched && f3.email.errors?.email" class="text-danger">
+                                {{'email invalid'|translate}}
+                            </div>
+                        </div>
+                        <div *ngIf="form3Error!=''" class="form-group text-danger">
+                            {{form3Error}}
+                        </div>
+
+                        <div class="form-group m-0">
+                            <button [disabled]="!form3.valid||loadingForm" type="submit" class="btn btn-primary btn-block">
+                                {{'reset'|translate}} <img *ngIf="loadingForm"  class=" font-weight-bold ml-auto loader-min" src="assets/img/spinner.gif" />
+
+                            </button>
+                        </div>
+                        <div class="mt-4 text-center">
+                            <small class="text-primary" style="cursor: pointer" (click)="activateLoginForm()">{{'login'|translate}}</small>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

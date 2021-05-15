@@ -1,0 +1,64 @@
+/* You can add global styles to this file, and also import other style files */
+.color-lang{
+  color: #333333!important;
+}
+
+.category-nav-menu{
+  float: right;
+  margin-left: 4px;
+  font-weight: bold;
+}
+.cat-nav{
+  background: #f1f1f1;
+}
+
+.custom-select:focus{
+  border-color: #777777!important;
+  box-shadow: 0 0 0 0.2rem rgb(255 255 255 / 25%)!important;
+}
+
+.custom-select{
+  border-color: #cecbcb !important;
+}
+
+.search-input{
+  border-color: #cecbcb;
+  border-width: 1px;
+  border-top-style: outset;
+  border-radius: 0 5px 5px 0px;
+}
+
+.search-text{
+  font-size: small;
+}
+
+.search-div{
+  z-index: 1;
+}
+
+.main-menu2 {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+.icon-size{
+  font-size: 24px;
+  color: #1c1c1c;
+}
+
+.payicon{
+  width: 40px;
+  height: 30px;
+}
+
+.payicon-mini{
+  width: 30px;
+  height: 20px;
+}
+
+.loader-min{
+  height: 25px;
+  width: 25px;
+}

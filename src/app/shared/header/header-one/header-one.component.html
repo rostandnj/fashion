@@ -1,0 +1,101 @@
+<header class="sticky" [ngClass]="class" [class.fixed]="stick && sticky">
+  <div class="mobile-fix-option"></div>
+  <div class="top-header" *ngIf="topbar">
+
+      <div class="row container-fluid">
+        <div class="col-lg-8 col-md-10 col-sm-11">
+          <div class="header-contact">
+            <ul>
+
+              <li><i class="fa fa-phone" aria-hidden="true"></i> | <i class="fa fa-whatsapp ml-1" aria-hidden="true"></i> +237 697 283 051 / +49 910 37 29 13 02</li>
+              <li>
+                <a><img class="img-fluid payicon-mini" src="assets/img/mtn.png" alt=""></a>
+              </li>
+              <li>
+                <a><img class="img-fluid payicon-mini" src="assets/img/orange.png" alt=""></a>
+              </li>
+              <li>
+                <a><img class="img-fluid payicon-mini" src="assets/img/paypal.png" alt=""></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-4  col-md-2 col-sm-1 text-right">
+          <ul class="header-dropdown">
+
+            <li class="onh mobile-account">
+              <i *ngIf="isLogin" class="fa fa-user" aria-hidden="true"></i>
+              <i *ngIf="!isLogin" class="fa fa-sign-in" aria-hidden="true"></i>
+              <ul class="onhover-show-div">
+                <li *ngIf="isLogin">
+                  <a data-lng="en">
+                    Profile
+                  </a>
+                </li>
+                <li *ngIf="!isLogin">
+                  <a (click)="openModal()" data-lng="en">
+                    Login
+                  </a>
+                </li>
+                <li *ngIf="isLogin">
+                  <a data-lng="es">
+                    Logout
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+  </div>
+    <div class="row container-fluid">
+      <div class="col-sm-12">
+        <div class="main-menu">
+          <div class="menu-left">
+            <div class="brand-logo">
+              <a routerLink="/home/fashion" id="headerlogo">
+                <img [src]="themeLogo" class="img-fluid" alt="logo">
+              </a>
+            </div>
+          </div>
+          <div class="menu-right pull-right">
+            <div>
+              <app-menu></app-menu>
+            </div>
+            <div>
+
+              <app-settings></app-settings>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row pl-2 pr-2 cat-nav">
+      <div class="col-sm-12">
+        <div class="main-menu2">
+          <div class="menu-left">
+            <app-left-menu></app-left-menu>
+
+          </div>
+          <div class="menu-right ">
+            <div class="search-div">
+              <div class="input-group">
+                <select class="custom-select search-text" id="inputGroupSelect04" aria-label="">
+                  <option selected >{{'all'|translate}}</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                  <option value="3">Three</option>
+                </select>
+                <div class="input-group-append">
+                  <input type="text" class="form-inline search-input"/>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</header>
